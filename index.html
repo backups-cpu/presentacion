@@ -31,12 +31,11 @@
   <img id="slide" src="" alt="Diapositiva">
 
   <script>
-    // Pega aquí las URLs de tus 4 imágenes de GitHub Issues
     const imagenes = [
-      "https://github.com/user-attachments/assets/LINK_1",
-      "https://github.com/user-attachments/assets/LINK_2",
-      "https://github.com/user-attachments/assets/LINK_3",
-      "https://github.com/user-attachments/assets/LINK_4"
+      "https://github.com/user-attachments/assets/4cb8a8f0-c298-4092-ad14-79950908d801",
+      "https://github.com/user-attachments/assets/16606b8f-a224-4c2f-9381-4eefd4a6d34c",
+      "https://github.com/user-attachments/assets/bb5728aa-c66d-4e6b-a872-88bda1389fdd",
+      "https://github.com/user-attachments/assets/5b4b2e9e-e6d3-40ac-91a9-c3be60830823"
     ];
 
     let indiceActual = 0;
@@ -46,13 +45,11 @@
       imgElement.src = imagenes[indiceActual];
     }
 
-    // Al hacer clic, incrementa y aplica el módulo para crear el bucle infinito
     document.body.addEventListener('click', () => {
       indiceActual = (indiceActual + 1) % imagenes.length;
       actualizarImagen();
     });
 
-    // Cargar la primera imagen al iniciar
     actualizarImagen();
   </script>
 

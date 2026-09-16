@@ -13,38 +13,21 @@
       height: 100%;
       overflow: hidden;
       background: #000;
-      cursor: pointer; /* Cambia el cursor para indicar que se puede hacer clic */
     }
 
     iframe {
       width: 100%;
       height: 100%;
       border: none;
-      /* Evita que el iframe capture el clic para que lo detecte la pantalla completa */
-      pointer-events: none; 
     }
   </style>
-
-  <!-- Carga la API de Google IFrame Player / PostMessage -->
-  <script src="https://www.google.com/jsapi"></script>
 </head>
 <body>
 
   <iframe 
-    id="presentation-iframe"
-    src="https://docs.google.com/presentation/d/1luxm4oM4FnkFfvFTajFFrgVbR9hDv83LbYTY-ffC8KQ/embed?start=false&loop=true&rm=minimal&enablejsapi=1" 
+    src="https://docs.google.com/presentation/d/1luxm4oM4FnkFfvFTajFFrgVbR9hDv83LbYTY-ffC8KQ/embed?start=true&loop=true&delayms=60000" 
     allowfullscreen>
   </iframe>
-
-  <script>
-    const iframe = document.getElementById('presentation-iframe');
-
-    // Escucha cualquier clic en la pantalla
-    document.body.addEventListener('click', () => {
-      // Envía la orden de pasar a la siguiente diapositiva a Google Slides
-      iframe.contentWindow.postMessage('{"event":"command","func":"nextSlide","args":""}', '*');
-    });
-  </script>
 
 </body>
 </html>

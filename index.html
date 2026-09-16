@@ -28,31 +28,31 @@
 </head>
 <body>
 
-  <!-- Imagen donde se mostrará la diapositiva -->
   <img id="slide" src="" alt="Diapositiva">
 
   <script>
-    // 1. Pega aquí la lista de URLs directas de tus imágenes
+    // Pega aquí las URLs de tus 4 imágenes de GitHub Issues
     const imagenes = [
-      "URL_DE_TU_IMAGEN_1",
-      "URL_DE_TU_IMAGEN_2",
-      "URL_DE_TU_IMAGEN_3"
+      "https://github.com/user-attachments/assets/LINK_1",
+      "https://github.com/user-attachments/assets/LINK_2",
+      "https://github.com/user-attachments/assets/LINK_3",
+      "https://github.com/user-attachments/assets/LINK_4"
     ];
 
     let indiceActual = 0;
     const imgElement = document.getElementById('slide');
 
-    // Muestra la primera imagen al cargar
     function actualizarImagen() {
       imgElement.src = imagenes[indiceActual];
     }
 
-    // Al hacer clic en cualquier parte de la pantalla, avanza o vuelve al inicio
+    // Al hacer clic, incrementa y aplica el módulo para crear el bucle infinito
     document.body.addEventListener('click', () => {
-      indiceActual = (indiceActual + 1) % imagenes.length; // Hace el bucle automático
+      indiceActual = (indiceActual + 1) % imagenes.length;
       actualizarImagen();
     });
 
+    // Cargar la primera imagen al iniciar
     actualizarImagen();
   </script>
 
